@@ -25,7 +25,7 @@ scaffold:
 	@echo Done
 
 .PHONY: link
-link: scaffold $(OBJ_FILES)
+link: scaffold $(OBJ_FILES) bin/libglad.a
 	@echo Linking $(ASSEMBLY)
 	@clang $(OBJ_FILES) -o $(BUILD_DIR)/$(ASSEMBLY) $(LINKER_FLAGS)
 
